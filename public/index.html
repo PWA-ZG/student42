@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEB2-PWA</title>
+    <script src="./scripts/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="manifest" href="./manifest.json" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="/">
+          <button class="nav-button nav-current">Home</button>
+        </a>
+        <a href="/photo">
+          <button class="nav-button">Photo</button>
+        </a>
+      </nav>
+      <button id="notification-button" class="notification-button">
+        <img class="notification-img" src="/assets/notification.svg" />
+      </button>
+    </header>
+    <main>
+      <div class="main-text">
+        <h1>Welcome to the project homepage</h1>
+        <p>
+          On this page you can view other people's posts and you can even make
+          your own post.
+        </p>
+      </div>
+      <div class="form-container">
+        <h3>Create your own post</h3>
+        <form id="form" class="form" method="POST">
+          <div class="form-row">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" minlength="4" />
+          </div>
+          <div class="form-row">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" minlength="4" />
+          </div>
+          <div class="form-row">
+            <label for="text">Text</label>
+            <input type="" id="text" name="text" minlength="4" />
+          </div>
+          <button class="form-submit">Submit</button>
+        </form>
+      </div>
+      <div class="posts-container">
+        <h2>Posts</h2>
+        <div id="posts"></div>
+      </div>
+    </main>
+  </body>
+</html>

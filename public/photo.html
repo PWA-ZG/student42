@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEB2-PWA</title>
+    <script src="./scripts/photo.js" defer></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/photo.css" />
+    <link rel="manifest" href="./manifest.json" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="/">
+          <button class="nav-button">Home</button>
+        </a>
+        <a href="/photo">
+          <button class="nav-button nav-current">Photo</button>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <h1 id="title">On this page you can take a photo of yourself</h1>
+      <div class="container">
+        <div id="camera-container" class="camera">
+          <video class="hidden" id="video" autoplay>
+            Video stream not available.
+          </video>
+          <canvas class="hidden" id="canvas"></canvas>
+        </div>
+        <div id="button-container">
+          <button id="photo-button" class="photo-button">Take a photo</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
